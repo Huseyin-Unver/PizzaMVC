@@ -1,0 +1,36 @@
+﻿@using PizzaMVC.Models;
+@model IEnumerable<ProductModel>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .jumbotron h1{
+        color: white;
+    }
+    .jumbotron p {
+        color: white;
+    }
+</style>
+
+<div class="jumbotron">
+    <div class="container col-md-12">
+        <h1 class="display-5">Pizza Sarayı'na Hoş Geldiniz!</h1>
+        <p class="lead">Lezzeti Doyasıya Yaşayın - Her Dilimde Mutluluk Var!</p>
+        <hr class="my-4">
+        <p>Kaliteli malzemeler ve sevgiyle hazırlanmış enfes pizzalarımızı keşfedin.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/" role="button">Hemen Sipariş Ver</a>
+        </p>
+    </div>
+    </div>
+
+
+
+
+    <div class="container pb-5">
+        @Html.Partial("_ProductList", Model)
+    </div>
+

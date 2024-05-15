@@ -1,0 +1,33 @@
+﻿@using PizzaMVC.Models;
+@model IEnumerable<ProductModel>
+
+
+<div class="row">
+    @foreach (var urun in Model)
+    {
+        <div class="col-md-4 mb-2">
+            <div class="card pt-2">
+                <img class="card-img-top" src="~/Upload/@urun.Image" alt="@urun.Name">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="/Home/About/@urun.Id">@urun.Name</a>
+
+                    </h4>
+                    <p class="card-text pt-2 description">@urun.Description</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted product-price">
+                        <i class="fa fa-try" aria-hidden="true"></i>
+                        @urun.Price
+                    </small>
+
+                    <a href="/Home/About/@urun.Id" class="btn btn-primary btn-sm float-right">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+                        Ürünü İncele
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
